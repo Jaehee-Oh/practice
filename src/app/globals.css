@@ -1,0 +1,302 @@
+:root {
+  color-scheme: light;
+  font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #f4f5fa;
+  color: #1f2430;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.guestbook {
+  width: min(430px, 100%);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.guestbook-header {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.guestbook-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f3c7e;
+}
+
+.guestbook-header p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.write-form {
+  background: #fff;
+  border: 1px solid #e3e6f0;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field-input {
+  width: 100%;
+  border: 1px solid #e3e6f0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 11px 12px;
+  font-size: 14px;
+  color: #1f2430;
+  outline: none;
+  resize: none;
+  transition: border-color 0.15s ease;
+}
+
+.field-input::placeholder {
+  color: #9ca3af;
+}
+
+.field-input:focus {
+  border-color: #f96167;
+}
+
+.field-textarea {
+  height: 72px;
+}
+
+.form-error {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e0434a;
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f96167;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: opacity 0.15s ease;
+}
+
+.submit-button:hover {
+  opacity: 0.92;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guest-card {
+  background: #fff;
+  border: 1px solid #e3e6f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.guest-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.guest-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2f3c7e;
+}
+
+.guest-date {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.guest-card-top-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-button {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 999px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.delete-button:hover {
+  color: #fff;
+  background-color: #e0434a;
+}
+
+.admin-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-toggle {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 4px 2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.admin-toggle:hover {
+  color: #f96167;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.page-button {
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid #e3e6f0;
+  background: #fff;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 6px;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.page-button:hover:not(:disabled) {
+  border-color: #f96167;
+  color: #f96167;
+}
+
+.page-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-button.active {
+  background: #f96167;
+  border-color: #f96167;
+  color: #fff;
+}
+
+.guest-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  padding: 2px 4px;
+  border-radius: 999px;
+  color: #9ca3af;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.like-button:hover {
+  color: #f96167;
+}
+
+.like-button:active {
+  transform: scale(0.9);
+}
+
+.like-button.liked {
+  color: #f96167;
+}
+
+.like-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.guest-message {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2430;
+  word-break: break-word;
+}
+
+.empty-state {
+  padding: 24px 16px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  background: #fff;
+  border: 1px dashed #e3e6f0;
+  border-radius: 14px;
+}
+
+.load-error {
+  padding: 16px;
+  text-align: center;
+  color: #e0434a;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #e3e6f0;
+  border-radius: 14px;
+}
