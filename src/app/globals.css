@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: #f4f5fa;
+  background: #eaf7f6;
   color: #1f2430;
 }
 
@@ -35,26 +35,66 @@ button {
   gap: 16px;
 }
 
-.guestbook-header {
+.profile-card {
   background: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 14px rgba(15, 118, 110, 0.1);
+}
+
+.profile-avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d6f5f2, #a6e8e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 400;
+  color: #0f766e;
+}
+
+.profile-info p {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.profile-stat {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  text-align: center;
+  gap: 1px;
+  padding-left: 14px;
+  border-left: 1px solid #e3e6f0;
 }
 
-.guestbook-header h1 {
-  margin: 0;
-  font-size: 22px;
+.profile-stat-value {
+  font-size: 17px;
   font-weight: 700;
-  color: #2f3c7e;
+  color: #14b8a6;
+  line-height: 1.2;
 }
 
-.guestbook-header p {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 400;
+.profile-stat-label {
+  font-size: 11px;
   color: #6b7280;
 }
 
@@ -86,7 +126,7 @@ button {
 }
 
 .field-input:focus {
-  border-color: #f96167;
+  border-color: #14b8a6;
 }
 
 .field-textarea {
@@ -105,7 +145,7 @@ button {
   border: none;
   border-radius: 8px;
   padding: 12px;
-  background: #f96167;
+  background: #14b8a6;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -147,7 +187,7 @@ button {
 .guest-name {
   font-size: 14px;
   font-weight: 700;
-  color: #2f3c7e;
+  color: #0f766e;
 }
 
 .guest-date {
@@ -196,7 +236,7 @@ button {
 }
 
 .admin-toggle:hover {
-  color: #f96167;
+  color: #14b8a6;
 }
 
 .pagination {
@@ -221,8 +261,8 @@ button {
 }
 
 .page-button:hover:not(:disabled) {
-  border-color: #f96167;
-  color: #f96167;
+  border-color: #14b8a6;
+  color: #14b8a6;
 }
 
 .page-button:disabled {
@@ -231,8 +271,8 @@ button {
 }
 
 .page-button.active {
-  background: #f96167;
-  border-color: #f96167;
+  background: #14b8a6;
+  border-color: #14b8a6;
   color: #fff;
 }
 
@@ -257,7 +297,7 @@ button {
 }
 
 .like-button:hover {
-  color: #f96167;
+  color: #f43f5e;
 }
 
 .like-button:active {
@@ -265,7 +305,7 @@ button {
 }
 
 .like-button.liked {
-  color: #f96167;
+  color: #f43f5e;
 }
 
 .like-button svg {

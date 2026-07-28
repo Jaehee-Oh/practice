@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Do_Hyeon } from 'next/font/google';
 import { supabase, type Post } from '@/lib/supabase';
+
+const doHyeon = Do_Hyeon({ subsets: ['latin'], weight: '400' });
 
 const LIKED_IDS_STORAGE_KEY = 'guestbook-liked-ids';
 const ADMIN_PASSCODE_STORAGE_KEY = 'guestbook-admin-passcode';
@@ -205,9 +208,18 @@ export default function HomePage() {
 
   return (
     <main className="guestbook">
-      <header className="guestbook-header">
-        <h1>📮 나의 방명록</h1>
-        <p>10초 안에 흔적을 남겨주세요</p>
+      <header className="profile-card">
+        <div className="profile-avatar" aria-hidden="true">
+          📮
+        </div>
+        <div className="profile-info">
+          <h1 className={doHyeon.className}>나의 방명록</h1>
+          <p>10초 안에 흔적을 남겨주세요</p>
+        </div>
+        <div className="profile-stat">
+          <span className="profile-stat-value">{entries.length}</span>
+          <span className="profile-stat-label">방명록</span>
+        </div>
       </header>
 
       <form className="write-form" onSubmit={handleSubmit} noValidate>
